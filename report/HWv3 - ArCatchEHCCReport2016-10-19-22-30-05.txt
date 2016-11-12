@@ -1,0 +1,656 @@
+========================================================================================================
+ArCatch.Checker Exception Handling Conformance Checking Report
+--------------------------------------------------------------------------------------------------------
+Label: (V) = Rule Pass | (X) = Rule Fail
+========================================================================================================
+
+--------------------------------------------------------------------------------------------------------
+(X) R1: (ViL) must handle (DiLEx) 1 ms
+
+ -ViL module implementation classes:
+  -healthwatcher.view.command.UpdateComplaintList
+  -healthwatcher.view.command.UpdateHealthUnitSearch
+  -healthwatcher.view.command.ConfigRMI
+  -healthwatcher.view.command.InsertSpecialComplaint
+  -healthwatcher.view.command.InsertAnimalComplaint
+  -healthwatcher.view.command.LoginMenu
+  -healthwatcher.view.command.SearchHealthUnitsBySpecialty
+  -healthwatcher.view.command.UpdateHealthUnitData
+  -healthwatcher.view.command.SearchComplaintData
+  -healthwatcher.view.command.UpdateEmployeeData
+  -healthwatcher.view.servlets.HWServlet
+  -healthwatcher.view.command.Login
+  -healthwatcher.view.command.GetDataForSearchByDiseaseType
+  -healthwatcher.view.command.UpdateHealthUnitList
+  -healthwatcher.view.servlets.ServletWebServer
+  -healthwatcher.view.command.Command
+  -healthwatcher.view.command.InsertFoodComplaint
+  -healthwatcher.view.command.UpdateEmployeeSearch
+  -healthwatcher.view.command.UpdateComplaintData
+  -healthwatcher.view.command.UpdateComplaintSearch
+  -healthwatcher.view.command.InsertEmployee
+  -healthwatcher.view.command.GetDataForSearchByHealthUnit
+  -healthwatcher.view.command.GetDataForSearchBySpeciality
+  -healthwatcher.view.command.SearchDiseaseData
+  -healthwatcher.view.command.SearchSpecialtiesByHealthUnit
+
+ -DiLEx exception implementation classes:
+  -lib.exceptions.CommunicationException
+  -java.rmi.RemoteException
+
+ -Rule Violations
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.UpdateComplaintList.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.UpdateHealthUnitSearch.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.ConfigRMI.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.LoginMenu.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.UpdateHealthUnitData.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.UpdateEmployeeData.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.servlets.HWServlet.rmiInitExceptionHandling(java.lang.Throwable)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.servlets.HWServlet.doPost(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.servlets.HWServlet.doGet(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.servlets.HWServlet.initCommands()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.servlets.HWServlet.handleRequest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Login.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.servlets.ServletWebServer.doGet(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.servlets.ServletWebServer.doPost(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.UpdateEmployeeSearch.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.UpdateComplaintData.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setRequest(javax.servlet.http.HttpServletRequest)] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.execute()] is not handling at least one exception in [DiLEx]
+	-The method [healthwatcher.view.command.Command.setReponse(javax.servlet.http.HttpServletResponse)] is not handling at least one exception in [DiLEx]
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(V) R2: only (ViL) can signal (SVTEx) 2 ms
+
+ -ViL module implementation classes:
+  -healthwatcher.view.command.UpdateComplaintList
+  -healthwatcher.view.command.UpdateHealthUnitSearch
+  -healthwatcher.view.command.ConfigRMI
+  -healthwatcher.view.command.InsertSpecialComplaint
+  -healthwatcher.view.command.InsertAnimalComplaint
+  -healthwatcher.view.command.LoginMenu
+  -healthwatcher.view.command.SearchHealthUnitsBySpecialty
+  -healthwatcher.view.command.UpdateHealthUnitData
+  -healthwatcher.view.command.SearchComplaintData
+  -healthwatcher.view.command.UpdateEmployeeData
+  -healthwatcher.view.servlets.HWServlet
+  -healthwatcher.view.command.Login
+  -healthwatcher.view.command.GetDataForSearchByDiseaseType
+  -healthwatcher.view.command.UpdateHealthUnitList
+  -healthwatcher.view.servlets.ServletWebServer
+  -healthwatcher.view.command.Command
+  -healthwatcher.view.command.InsertFoodComplaint
+  -healthwatcher.view.command.UpdateEmployeeSearch
+  -healthwatcher.view.command.UpdateComplaintData
+  -healthwatcher.view.command.UpdateComplaintSearch
+  -healthwatcher.view.command.InsertEmployee
+  -healthwatcher.view.command.GetDataForSearchByHealthUnit
+  -healthwatcher.view.command.GetDataForSearchBySpeciality
+  -healthwatcher.view.command.SearchDiseaseData
+  -healthwatcher.view.command.SearchSpecialtiesByHealthUnit
+
+ -SVTEx exception implementation classes:
+  -javax.servlet.ServletException
+
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(V) R3: (ViL) cannot signal (AllEx) 1 ms
+
+ -ViL module implementation classes:
+  -healthwatcher.view.command.UpdateComplaintList
+  -healthwatcher.view.command.UpdateHealthUnitSearch
+  -healthwatcher.view.command.ConfigRMI
+  -healthwatcher.view.command.InsertSpecialComplaint
+  -healthwatcher.view.command.InsertAnimalComplaint
+  -healthwatcher.view.command.LoginMenu
+  -healthwatcher.view.command.SearchHealthUnitsBySpecialty
+  -healthwatcher.view.command.UpdateHealthUnitData
+  -healthwatcher.view.command.SearchComplaintData
+  -healthwatcher.view.command.UpdateEmployeeData
+  -healthwatcher.view.servlets.HWServlet
+  -healthwatcher.view.command.Login
+  -healthwatcher.view.command.GetDataForSearchByDiseaseType
+  -healthwatcher.view.command.UpdateHealthUnitList
+  -healthwatcher.view.servlets.ServletWebServer
+  -healthwatcher.view.command.Command
+  -healthwatcher.view.command.InsertFoodComplaint
+  -healthwatcher.view.command.UpdateEmployeeSearch
+  -healthwatcher.view.command.UpdateComplaintData
+  -healthwatcher.view.command.UpdateComplaintSearch
+  -healthwatcher.view.command.InsertEmployee
+  -healthwatcher.view.command.GetDataForSearchByHealthUnit
+  -healthwatcher.view.command.GetDataForSearchBySpeciality
+  -healthwatcher.view.command.SearchDiseaseData
+  -healthwatcher.view.command.SearchSpecialtiesByHealthUnit
+
+ -AllEx exception implementation classes:
+  -lib.exceptions.ObjectAlreadyInsertedException
+  -lib.exceptions.InvalidSessionException
+  -lib.exceptions.RepositoryException
+  -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.InvalidDateException
+  -lib.exceptions.InsertEntryException
+  -lib.exceptions.UpdateEntryException
+  -lib.exceptions.ObjectNotFoundException
+  -lib.exceptions.CommunicationException
+  -lib.exceptions.PersistenceSoftException
+  -lib.exceptions.PersistenceMechanismException
+  -lib.exceptions.SituationFacadeException
+  -lib.exceptions.TransactionException
+
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(V) R4: only (DiL) can raise (DiLEx) 18 ms
+
+ -DiL module implementation classes:
+  -healthwatcher.business.HealthWatcherFacadeInit
+  -healthwatcher.view.IFacade
+  -lib.distribution.rmi.IteratorRMISourceAdapter
+  -lib.distribution.rmi.IIteratorRMITargetAdapter
+  -healthwatcher.business.HealthWatcherFacade
+  -lib.distribution.rmi.IteratorRMITargetAdapter
+
+ -DiLEx exception implementation classes:
+  -lib.exceptions.CommunicationException
+  -java.rmi.RemoteException
+
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(X) R5: only (DiL) can signal (DiLEx) 0 ms
+
+ -DiL module implementation classes:
+  -healthwatcher.business.HealthWatcherFacadeInit
+  -healthwatcher.view.IFacade
+  -lib.distribution.rmi.IteratorRMISourceAdapter
+  -lib.distribution.rmi.IIteratorRMITargetAdapter
+  -healthwatcher.business.HealthWatcherFacade
+  -lib.distribution.rmi.IteratorRMITargetAdapter
+
+ -DiLEx exception implementation classes:
+  -lib.exceptions.CommunicationException
+  -java.rmi.RemoteException
+
+ -Rule Violations
+	-The method [lib.util.IteratorDsk.next()] is signaling the exception [lib.exceptions.CommunicationException]
+	-The method [lib.util.IteratorDsk.close()] is signaling the exception [lib.exceptions.CommunicationException]
+	-The method [lib.util.IteratorDsk.hasNext()] is signaling the exception [lib.exceptions.CommunicationException]
+	-The method [lib.util.IteratorDsk.remove()] is signaling the exception [lib.exceptions.CommunicationException]
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(X) R6: (DiL) must handle (BuLEx) 0 ms
+
+ -DiL module implementation classes:
+  -healthwatcher.business.HealthWatcherFacadeInit
+  -healthwatcher.view.IFacade
+  -lib.distribution.rmi.IteratorRMISourceAdapter
+  -lib.distribution.rmi.IIteratorRMITargetAdapter
+  -healthwatcher.business.HealthWatcherFacade
+  -lib.distribution.rmi.IteratorRMITargetAdapter
+
+ -BuLEx exception implementation classes:
+  -lib.exceptions.ObjectAlreadyInsertedException
+
+ -Rule Violations
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.getComplaintList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.getPartialHealthUnitList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.getHealthUnitList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.searchComplaint(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.getDiseaseTypeList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.updateHealthUnit(healthwatcher.model.healthguide.HealthUnit)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.searchHealthUnit(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.searchSpecialitiesByHealthUnit(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.searchHealthUnitsBySpeciality(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.searchEmployee(java.lang.String)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.update(healthwatcher.model.employee.Employee)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.searchDiseaseType(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.getPm()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.updateComplaint(healthwatcher.model.complaint.Complaint)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacadeInit.getSpecialityList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.updateComplaint(healthwatcher.model.complaint.Complaint)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.getHealthUnitList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.getPartialHealthUnitList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.updateHealthUnit(healthwatcher.model.healthguide.HealthUnit)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.searchEmployee(java.lang.String)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.searchDiseaseType(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.searchComplaint(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.getDiseaseTypeList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.getSpecialityList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.searchHealthUnitsBySpeciality(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.updateEmployee(healthwatcher.model.employee.Employee)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.searchSpecialitiesByHealthUnit(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.insertComplaint(healthwatcher.model.complaint.Complaint)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.getComplaintList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.insert(healthwatcher.model.employee.Employee)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.view.IFacade.searchHealthUnit(int)] is not handling at least one exception in [BuLEx]
+	-The method [lib.distribution.rmi.IteratorRMISourceAdapter.next()] is not handling at least one exception in [BuLEx]
+	-The method [lib.distribution.rmi.IteratorRMISourceAdapter.connect()] is not handling at least one exception in [BuLEx]
+	-The method [lib.distribution.rmi.IteratorRMISourceAdapter.print()] is not handling at least one exception in [BuLEx]
+	-The method [lib.distribution.rmi.IteratorRMISourceAdapter.close()] is not handling at least one exception in [BuLEx]
+	-The method [lib.distribution.rmi.IteratorRMISourceAdapter.remove()] is not handling at least one exception in [BuLEx]
+	-The method [lib.distribution.rmi.IteratorRMISourceAdapter.hasNext()] is not handling at least one exception in [BuLEx]
+	-The method [lib.distribution.rmi.IIteratorRMITargetAdapter.getNext()] is not handling at least one exception in [BuLEx]
+	-The method [lib.distribution.rmi.IIteratorRMITargetAdapter.close()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.searchHealthUnitsBySpeciality(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.getPm()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.searchDiseaseType(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.searchHealthUnit(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.searchSpecialitiesByHealthUnit(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.getHealthUnitList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.searchEmployee(java.lang.String)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.insert(healthwatcher.model.employee.Employee)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.updateEmployee(healthwatcher.model.employee.Employee)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.<clinit>()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.searchComplaint(int)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.getDiseaseTypeList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.rmiFacadeExceptionHandling(java.lang.Throwable)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.pmInit()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.getInstance()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.updateHealthUnit(healthwatcher.model.healthguide.HealthUnit)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.getComplaintList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.getSpecialityList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.updateComplaint(healthwatcher.model.complaint.Complaint)] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.main(java.lang.String[])] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.isPersistent()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.getPartialHealthUnitList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.HealthWatcherFacade.insertComplaint(healthwatcher.model.complaint.Complaint)] is not handling at least one exception in [BuLEx]
+	-The method [lib.distribution.rmi.IteratorRMITargetAdapter.close()] is not handling at least one exception in [BuLEx]
+	-The method [lib.distribution.rmi.IteratorRMITargetAdapter.getNext()] is not handling at least one exception in [BuLEx]
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(V) R7: only (DiL) can remap (BuLEx) to (DiLEx) 3223 ms
+
+ -DiL module implementation classes:
+  -healthwatcher.business.HealthWatcherFacadeInit
+  -healthwatcher.view.IFacade
+  -lib.distribution.rmi.IteratorRMISourceAdapter
+  -lib.distribution.rmi.IIteratorRMITargetAdapter
+  -healthwatcher.business.HealthWatcherFacade
+  -lib.distribution.rmi.IteratorRMITargetAdapter
+
+ -BuLEx exception implementation classes:
+  -lib.exceptions.ObjectAlreadyInsertedException
+
+ -DiLEx exception implementation classes:
+  -lib.exceptions.CommunicationException
+  -java.rmi.RemoteException
+
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(X) R8: only (BuL) can raise (BuLEx) 309 ms
+
+ -BuL module implementation classes:
+  -healthwatcher.business.complaint.ComplaintRecord
+  -healthwatcher.business.healthguide.HealthUnitRecord
+  -healthwatcher.business.healthguide.MedicalSpecialityRecord
+  -healthwatcher.business.complaint.DiseaseRecord
+  -healthwatcher.business.employee.EmployeeRecord
+
+ -BuLEx exception implementation classes:
+  -lib.exceptions.ObjectAlreadyInsertedException
+
+ -Rule Violations
+	-The method [healthwatcher.data.rdb.AddressRepositoryRDB.insert(healthwatcher.model.address.Address)] is raising the exception [lib.exceptions.ObjectAlreadyInsertedException]
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(X) R9: only (BuL) can signal (BuLEx) 1 ms
+
+ -BuL module implementation classes:
+  -healthwatcher.business.complaint.ComplaintRecord
+  -healthwatcher.business.healthguide.HealthUnitRecord
+  -healthwatcher.business.healthguide.MedicalSpecialityRecord
+  -healthwatcher.business.complaint.DiseaseRecord
+  -healthwatcher.business.employee.EmployeeRecord
+
+ -BuLEx exception implementation classes:
+  -lib.exceptions.ObjectAlreadyInsertedException
+
+ -Rule Violations
+	-The method [healthwatcher.data.IHealthUnitRepository.insert(healthwatcher.model.healthguide.HealthUnit)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.IAddressRepository.insert(healthwatcher.model.address.Address)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.mem.SpecialityRepositoryArray.insert(healthwatcher.model.healthguide.MedicalSpeciality)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.IComplaintRepository.insert(healthwatcher.model.complaint.Complaint)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.ISpecialityRepository.insert(healthwatcher.model.healthguide.MedicalSpeciality)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.IDiseaseRepository.insert(healthwatcher.model.complaint.DiseaseType)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.rdb.ComplaintRepositoryRDB.insert(healthwatcher.model.complaint.Complaint)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.rdb.ComplaintRepositoryRDB.deepInsertAnimal(healthwatcher.model.complaint.AnimalComplaint)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.rdb.ComplaintRepositoryRDB.deepInsertCommon(healthwatcher.model.complaint.Complaint)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.rdb.ComplaintRepositoryRDB.deepInsertSpecial(healthwatcher.model.complaint.SpecialComplaint)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.rdb.ComplaintRepositoryRDB.deepInsertFood(healthwatcher.model.complaint.FoodComplaint)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.mem.SymptomRepositoryArray.insert(healthwatcher.model.complaint.Symptom)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.ISymptomRepository.insert(healthwatcher.model.complaint.Symptom)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.rdb.DiseaseTypeRepositoryRDB.insert(healthwatcher.model.complaint.DiseaseType)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.rdb.AddressRepositoryRDB.insert(healthwatcher.model.address.Address)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.rdb.SpecialityRepositoryRDB.insert(healthwatcher.model.healthguide.MedicalSpeciality)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.IEmployeeRepository.insert(healthwatcher.model.employee.Employee)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.mem.HealthUnitRepositoryArray.insert(healthwatcher.model.healthguide.HealthUnit)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.mem.DiseaseTypeRepositoryArray.insert(healthwatcher.model.complaint.DiseaseType)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.mem.ComplaintRepositoryArray.insert(healthwatcher.model.complaint.Complaint)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+	-The method [healthwatcher.data.rdb.HealthUnitRepositoryRDB.insert(healthwatcher.model.healthguide.HealthUnit)] is signaling the exception [lib.exceptions.ObjectAlreadyInsertedException]
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(X) R10: (BuL) must handle (DaLEx) 1 ms
+
+ -BuL module implementation classes:
+  -healthwatcher.business.complaint.ComplaintRecord
+  -healthwatcher.business.healthguide.HealthUnitRecord
+  -healthwatcher.business.healthguide.MedicalSpecialityRecord
+  -healthwatcher.business.complaint.DiseaseRecord
+  -healthwatcher.business.employee.EmployeeRecord
+
+ -DaLEx exception implementation classes:
+  -lib.exceptions.ObjectNotFoundException
+  -lib.exceptions.RepositoryException
+  -lib.exceptions.PersistenceSoftException
+  -lib.exceptions.PersistenceMechanismException
+  -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.TransactionException
+
+ -Rule Violations
+	-The method [healthwatcher.business.complaint.ComplaintRecord.insert(healthwatcher.model.complaint.Complaint)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.complaint.ComplaintRecord.update(healthwatcher.model.complaint.Complaint)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.complaint.ComplaintRecord.search(int)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.complaint.ComplaintRecord.getComplaintList()] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.complaint.ComplaintRecord.validate(healthwatcher.model.complaint.Complaint)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.HealthUnitRecord.search(int)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.HealthUnitRecord.searchSpecialityByHealthUnit(int)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.HealthUnitRecord.getHealthUnitList()] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.HealthUnitRecord.getPartialHealthUnitList()] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.HealthUnitRecord.update(healthwatcher.model.healthguide.HealthUnit)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.HealthUnitRecord.searchHealthUnitsBySpeciality(int)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.MedicalSpecialityRecord.getListaEspecialidade()] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.complaint.DiseaseRecord.search(int)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.complaint.DiseaseRecord.getDiseaseTypeList()] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.employee.EmployeeRecord.update(healthwatcher.model.employee.Employee)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.employee.EmployeeRecord.search(java.lang.String)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.employee.EmployeeRecord.insert(healthwatcher.model.employee.Employee)] is not handling at least one exception in [DaLEx]
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(V) R11: only (BuL) can remap (DaLEx) to (BuLEx) 10039 ms
+
+ -BuL module implementation classes:
+  -healthwatcher.business.complaint.ComplaintRecord
+  -healthwatcher.business.healthguide.HealthUnitRecord
+  -healthwatcher.business.healthguide.MedicalSpecialityRecord
+  -healthwatcher.business.complaint.DiseaseRecord
+  -healthwatcher.business.employee.EmployeeRecord
+
+ -DaLEx exception implementation classes:
+  -lib.exceptions.ObjectNotFoundException
+  -lib.exceptions.RepositoryException
+  -lib.exceptions.PersistenceSoftException
+  -lib.exceptions.PersistenceMechanismException
+  -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.TransactionException
+
+ -BuLEx exception implementation classes:
+  -lib.exceptions.ObjectAlreadyInsertedException
+
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(V) R12: only (DaL) can raise (DaLEx) 16 ms
+
+ -DaL module implementation classes:
+  -healthwatcher.data.mem.ComplaintRepositoryArray
+  -healthwatcher.data.mem.SpecialityRepositoryArray
+  -healthwatcher.data.IDiseaseRepository
+  -healthwatcher.data.IComplaintRepository
+  -healthwatcher.data.rdb.ComplaintRepositoryRDB
+  -healthwatcher.data.rdb.AddressRepositoryRDB
+  -healthwatcher.data.rdb.HealthUnitRepositoryRDB
+  -healthwatcher.data.IHealthUnitRepository
+  -healthwatcher.data.ISpecialityRepository
+  -lib.persistence.PersistenceMechanism
+  -healthwatcher.data.rdb.EmployeeRepositoryRDB
+  -lib.persistence.IPersistenceMechanism
+  -healthwatcher.data.mem.SymptomRepositoryArray
+  -healthwatcher.data.rdb.SpecialityRepositoryRDB
+  -healthwatcher.data.mem.EmployeeRepositoryArray
+  -healthwatcher.data.IEmployeeRepository
+  -healthwatcher.data.mem.DiseaseTypeRepositoryArray
+  -healthwatcher.data.mem.HealthUnitRepositoryArray
+  -healthwatcher.data.IAddressRepository
+  -healthwatcher.data.ISymptomRepository
+  -healthwatcher.data.rdb.DiseaseTypeRepositoryRDB
+
+ -DaLEx exception implementation classes:
+  -lib.exceptions.ObjectNotFoundException
+  -lib.exceptions.RepositoryException
+  -lib.exceptions.PersistenceSoftException
+  -lib.exceptions.PersistenceMechanismException
+  -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.TransactionException
+
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(V) R13: only (DaL) can signal (DaLEx) 2 ms
+
+ -DaL module implementation classes:
+  -healthwatcher.data.mem.ComplaintRepositoryArray
+  -healthwatcher.data.mem.SpecialityRepositoryArray
+  -healthwatcher.data.IDiseaseRepository
+  -healthwatcher.data.IComplaintRepository
+  -healthwatcher.data.rdb.ComplaintRepositoryRDB
+  -healthwatcher.data.rdb.AddressRepositoryRDB
+  -healthwatcher.data.rdb.HealthUnitRepositoryRDB
+  -healthwatcher.data.IHealthUnitRepository
+  -healthwatcher.data.ISpecialityRepository
+  -lib.persistence.PersistenceMechanism
+  -healthwatcher.data.rdb.EmployeeRepositoryRDB
+  -lib.persistence.IPersistenceMechanism
+  -healthwatcher.data.mem.SymptomRepositoryArray
+  -healthwatcher.data.rdb.SpecialityRepositoryRDB
+  -healthwatcher.data.mem.EmployeeRepositoryArray
+  -healthwatcher.data.IEmployeeRepository
+  -healthwatcher.data.mem.DiseaseTypeRepositoryArray
+  -healthwatcher.data.mem.HealthUnitRepositoryArray
+  -healthwatcher.data.IAddressRepository
+  -healthwatcher.data.ISymptomRepository
+  -healthwatcher.data.rdb.DiseaseTypeRepositoryRDB
+
+ -DaLEx exception implementation classes:
+  -lib.exceptions.ObjectNotFoundException
+  -lib.exceptions.RepositoryException
+  -lib.exceptions.PersistenceSoftException
+  -lib.exceptions.PersistenceMechanismException
+  -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.TransactionException
+
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(V) R14: only (DaL) can handle (SQLEx) 1 ms
+
+ -DaL module implementation classes:
+  -healthwatcher.data.mem.ComplaintRepositoryArray
+  -healthwatcher.data.mem.SpecialityRepositoryArray
+  -healthwatcher.data.IDiseaseRepository
+  -healthwatcher.data.IComplaintRepository
+  -healthwatcher.data.rdb.ComplaintRepositoryRDB
+  -healthwatcher.data.rdb.AddressRepositoryRDB
+  -healthwatcher.data.rdb.HealthUnitRepositoryRDB
+  -healthwatcher.data.IHealthUnitRepository
+  -healthwatcher.data.ISpecialityRepository
+  -lib.persistence.PersistenceMechanism
+  -healthwatcher.data.rdb.EmployeeRepositoryRDB
+  -lib.persistence.IPersistenceMechanism
+  -healthwatcher.data.mem.SymptomRepositoryArray
+  -healthwatcher.data.rdb.SpecialityRepositoryRDB
+  -healthwatcher.data.mem.EmployeeRepositoryArray
+  -healthwatcher.data.IEmployeeRepository
+  -healthwatcher.data.mem.DiseaseTypeRepositoryArray
+  -healthwatcher.data.mem.HealthUnitRepositoryArray
+  -healthwatcher.data.IAddressRepository
+  -healthwatcher.data.ISymptomRepository
+  -healthwatcher.data.rdb.DiseaseTypeRepositoryRDB
+
+ -SQLEx exception implementation classes:
+  -java.sql.SQLException
+
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(X) R15: (DaL) cannot signal (SQLEx) 1 ms
+
+ -DaL module implementation classes:
+  -healthwatcher.data.mem.ComplaintRepositoryArray
+  -healthwatcher.data.mem.SpecialityRepositoryArray
+  -healthwatcher.data.IDiseaseRepository
+  -healthwatcher.data.IComplaintRepository
+  -healthwatcher.data.rdb.ComplaintRepositoryRDB
+  -healthwatcher.data.rdb.AddressRepositoryRDB
+  -healthwatcher.data.rdb.HealthUnitRepositoryRDB
+  -healthwatcher.data.IHealthUnitRepository
+  -healthwatcher.data.ISpecialityRepository
+  -lib.persistence.PersistenceMechanism
+  -healthwatcher.data.rdb.EmployeeRepositoryRDB
+  -lib.persistence.IPersistenceMechanism
+  -healthwatcher.data.mem.SymptomRepositoryArray
+  -healthwatcher.data.rdb.SpecialityRepositoryRDB
+  -healthwatcher.data.mem.EmployeeRepositoryArray
+  -healthwatcher.data.IEmployeeRepository
+  -healthwatcher.data.mem.DiseaseTypeRepositoryArray
+  -healthwatcher.data.mem.HealthUnitRepositoryArray
+  -healthwatcher.data.IAddressRepository
+  -healthwatcher.data.ISymptomRepository
+  -healthwatcher.data.rdb.DiseaseTypeRepositoryRDB
+
+ -SQLEx exception implementation classes:
+  -java.sql.SQLException
+
+ -Rule Violations
+	-The method [healthwatcher.data.rdb.ComplaintRepositoryRDB.accessComplaint(java.sql.ResultSet,healthwatcher.model.complaint.Complaint)] is signaling the exception [java.sql.SQLException]
+--------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------
+(X) R16: (DaLEx) cannot flow (DaL, BuL, DiL) 17 ms
+
+ -DaLEx exception implementation classes:
+  -lib.exceptions.ObjectNotFoundException
+  -lib.exceptions.RepositoryException
+  -lib.exceptions.PersistenceSoftException
+  -lib.exceptions.PersistenceMechanismException
+  -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.TransactionException
+
+ -DaL module implementation classes:
+  -healthwatcher.data.mem.ComplaintRepositoryArray
+  -healthwatcher.data.mem.SpecialityRepositoryArray
+  -healthwatcher.data.IDiseaseRepository
+  -healthwatcher.data.IComplaintRepository
+  -healthwatcher.data.rdb.ComplaintRepositoryRDB
+  -healthwatcher.data.rdb.AddressRepositoryRDB
+  -healthwatcher.data.rdb.HealthUnitRepositoryRDB
+  -healthwatcher.data.IHealthUnitRepository
+  -healthwatcher.data.ISpecialityRepository
+  -lib.persistence.PersistenceMechanism
+  -healthwatcher.data.rdb.EmployeeRepositoryRDB
+  -lib.persistence.IPersistenceMechanism
+  -healthwatcher.data.mem.SymptomRepositoryArray
+  -healthwatcher.data.rdb.SpecialityRepositoryRDB
+  -healthwatcher.data.mem.EmployeeRepositoryArray
+  -healthwatcher.data.IEmployeeRepository
+  -healthwatcher.data.mem.DiseaseTypeRepositoryArray
+  -healthwatcher.data.mem.HealthUnitRepositoryArray
+  -healthwatcher.data.IAddressRepository
+  -healthwatcher.data.ISymptomRepository
+  -healthwatcher.data.rdb.DiseaseTypeRepositoryRDB
+
+ -BuL module implementation classes:
+  -healthwatcher.business.complaint.ComplaintRecord
+  -healthwatcher.business.healthguide.HealthUnitRecord
+  -healthwatcher.business.healthguide.MedicalSpecialityRecord
+  -healthwatcher.business.complaint.DiseaseRecord
+  -healthwatcher.business.employee.EmployeeRecord
+
+ -DiL module implementation classes:
+  -healthwatcher.business.HealthWatcherFacadeInit
+  -healthwatcher.view.IFacade
+  -lib.distribution.rmi.IteratorRMISourceAdapter
+  -lib.distribution.rmi.IIteratorRMITargetAdapter
+  -healthwatcher.business.HealthWatcherFacade
+  -lib.distribution.rmi.IteratorRMITargetAdapter
+
+ -Rule Violations
+	-The exception [lib.exceptions.ObjectNotFoundException] is flowing through [DaL, BuL, DiL]
+	-The exception [lib.exceptions.RepositoryException] is flowing through [DaL, BuL, DiL]
+	-The exception [lib.exceptions.ObjectNotValidException] is flowing through [DaL, BuL, DiL]
+--------------------------------------------------------------------------------------------------------
+
