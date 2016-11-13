@@ -2,7 +2,7 @@ import arcatch.ArCatch;
 import arcatch.dsl.element.ExceptionElement;
 import arcatch.dsl.element.ModuleElement;
 
-public class HealthWatcherBenchmark {
+public class HealthWatcherTest {
 
 	private static ModuleElement viL;
 
@@ -272,10 +272,10 @@ public class HealthWatcherBenchmark {
 				.element()
 				.module("DiL")
 				.matching(
-						"(lib.distribution.rmi.[a-zA-Z_$][a-zA-Z0-9_$]*|healthwatcher.view.(IFacade|RMIServletAdapter)|healthwatcher.business.(HealthWatcherFacade|IFacadeRMITargetAdapter|RMIFacadeAdapter|HWServer))*")
+						"(lib.distribution.rmi.[a-zA-Z_$][a-zA-Z0-9_$]*|healthwatcher.view.(IFacade|RMIServletAdapter)|healthwatcher.business.(factories.[a-zA-Z_$][a-zA-Z0-9_$]*|HealthWatcherFacade|IFacadeRMITargetAdapter|RMIFacadeAdapter|HWServer))*")
 				.build();
 
-		buL = ArCatch.element().module("BuL").matching("healthwatcher.business.(complaint|employee|healthguide|factories).[a-zA-Z_$][a-zA-Z0-9_$]*").build();
+		buL = ArCatch.element().module("BuL").matching("healthwatcher.business.(complaint|employee|healthguide).[a-zA-Z_$][a-zA-Z0-9_$]*").build();
 
 		daL = ArCatch.element().module("DaL").matching("(healthwatcher.data|lib.persistence).([a-zA-Z_$][a-zA-Z0-9_$]*.)*[a-zA-Z_$][a-zA-Z0-9_$]*").build();
 
@@ -303,10 +303,10 @@ public class HealthWatcherBenchmark {
 				.element()
 				.module("DiL")
 				.matching(
-						"(lib.distribution.rmi.[a-zA-Z_$][a-zA-Z0-9_$]*|healthwatcher.view.(IFacade|RMIServletAdapter)|healthwatcher.business.(HealthWatcherFacade|IFacadeRMITargetAdapter|RMIFacadeAdapter|HWServer))*")
+						"(lib.distribution.rmi.[a-zA-Z_$][a-zA-Z0-9_$]*|healthwatcher.view.(IFacade|RMIServletAdapter)|healthwatcher.business.(factories.[a-zA-Z_$][a-zA-Z0-9_$]*|HealthWatcherFacade|IFacadeRMITargetAdapter|RMIFacadeAdapter|HWServer))*")
 				.build();
 
-		buL = ArCatch.element().module("BuL").matching("healthwatcher.business.(complaint|employee|healthguide|factories).[a-zA-Z_$][a-zA-Z0-9_$]*").build();
+		buL = ArCatch.element().module("BuL").matching("healthwatcher.business.(complaint|employee|healthguide).[a-zA-Z_$][a-zA-Z0-9_$]*").build();
 
 		daL = ArCatch.element().module("DaL").matching("(healthwatcher.data|lib.persistence).([a-zA-Z_$][a-zA-Z0-9_$]*.)*[a-zA-Z_$][a-zA-Z0-9_$]*").build();
 
@@ -334,7 +334,7 @@ public class HealthWatcherBenchmark {
 				.element()
 				.module("DiL")
 				.matching(
-						"(lib.distribution.rmi.[a-zA-Z_$][a-zA-Z0-9_$]*|healthwatcher.view.(IFacade|RMIServletAdapter)|healthwatcher.business.(HealthWatcherFacade|IFacadeRMITargetAdapter|RMIFacadeAdapter|HWServer))*")
+						"(lib.distribution.rmi.[a-zA-Z_$][a-zA-Z0-9_$]*|healthwatcher.view.(IFacade|RMIServletAdapter)|healthwatcher.business.(factories.[a-zA-Z_$][a-zA-Z0-9_$]*|HealthWatcherFacade|IFacadeRMITargetAdapter|RMIFacadeAdapter|HWServer))*")
 				.build();
 
 		buL = ArCatch.element().module("BuL").matching("healthwatcher.business.(complaint|employee|healthguide|factories).[a-zA-Z_$][a-zA-Z0-9_$]*").build();
@@ -343,9 +343,10 @@ public class HealthWatcherBenchmark {
 
 		buLEx = ArCatch.element().exception("BuLEx").matching("lib.exceptions.(ObjectAlready)[a-zA-Z_$][a-zA-Z0-9_$]*").build();
 
-		diLEx = ArCatch.element().exception("DiLEx").matching("(java.rmi.RemoteException|lib.exceptions.CommunicationException)*").build();
+		diLEx = ArCatch.element().exception("DiLEx").matching("(java.rmi.RemoteException|lib.exceptions.(CommunicationException|FacadeUnavailableException))*").build();
 
-		daLEx = ArCatch.element().exception("DaLEx").matching("lib.exceptions.(Persistence|ObjectNot|Repository|Transaction)[a-zA-Z_$][a-zA-Z0-9_$]*").build();
+		daLEx = ArCatch.element().exception("DaLEx")
+				.matching("lib.exceptions.(Persistence|ObjectNot|Repository|Transaction|SQLPersistenceMechanism|ConnectionPersistenceMechanism)[a-zA-Z_$][a-zA-Z0-9_$]*").build();
 
 		sqlEx = ArCatch.element().exception("SQLEx").matching("java.sql.SQLException").build();
 

@@ -5,7 +5,7 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 ========================================================================================================
 
 --------------------------------------------------------------------------------------------------------
-(X) R1: (ViL) must handle (DiLEx) 3 ms
+(X) R1: (ViL) must handle (DiLEx) 2 ms
 
  -ViL module implementation classes:
   -healthwatcher.view.command.UpdateHealthUnitSearch
@@ -50,6 +50,7 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 
  -DiLEx exception implementation classes:
   -lib.exceptions.CommunicationException
+  -lib.exceptions.FacadeUnavailableException
   -java.rmi.RemoteException
 
  -Rule Violations
@@ -186,7 +187,7 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(V) R2: only (ViL) can signal (SVTEx) 3 ms
+(V) R2: only (ViL) can signal (SVTEx) 2 ms
 
  -ViL module implementation classes:
   -healthwatcher.view.command.UpdateHealthUnitSearch
@@ -235,7 +236,7 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(X) R3: (ViL) cannot signal (AllEx) 2 ms
+(X) R3: (ViL) cannot signal (AllEx) 1 ms
 
  -ViL module implementation classes:
   -healthwatcher.view.command.UpdateHealthUnitSearch
@@ -299,7 +300,7 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(X) R4: only (DiL) can raise (DiLEx) 20 ms
+(V) R4: only (DiL) can raise (DiLEx) 24 ms
 
  -DiL module implementation classes:
   -healthwatcher.business.HWServer
@@ -307,17 +308,19 @@ Label: (V) = Rule Pass | (X) = Rule Fail
   -healthwatcher.business.IFacadeRMITargetAdapter
   -lib.distribution.rmi.IteratorRMISourceAdapter
   -lib.distribution.rmi.IIteratorRMITargetAdapter
+  -healthwatcher.business.factories.FacadeFactory
+  -healthwatcher.business.factories.RMIFacadeFactory
   -healthwatcher.business.HealthWatcherFacade
   -lib.distribution.rmi.IteratorRMITargetAdapter
   -healthwatcher.business.RMIFacadeAdapter
+  -healthwatcher.business.factories.AbstractFacadeFactory
   -healthwatcher.view.RMIServletAdapter
 
  -DiLEx exception implementation classes:
   -lib.exceptions.CommunicationException
+  -lib.exceptions.FacadeUnavailableException
   -java.rmi.RemoteException
 
- -Rule Violations
-	-The method [healthwatcher.business.factories.RMIFacadeFactory.createServerFacade()] is raising the exception [lib.exceptions.CommunicationException]
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
@@ -329,13 +332,17 @@ Label: (V) = Rule Pass | (X) = Rule Fail
   -healthwatcher.business.IFacadeRMITargetAdapter
   -lib.distribution.rmi.IteratorRMISourceAdapter
   -lib.distribution.rmi.IIteratorRMITargetAdapter
+  -healthwatcher.business.factories.FacadeFactory
+  -healthwatcher.business.factories.RMIFacadeFactory
   -healthwatcher.business.HealthWatcherFacade
   -lib.distribution.rmi.IteratorRMITargetAdapter
   -healthwatcher.business.RMIFacadeAdapter
+  -healthwatcher.business.factories.AbstractFacadeFactory
   -healthwatcher.view.RMIServletAdapter
 
  -DiLEx exception implementation classes:
   -lib.exceptions.CommunicationException
+  -lib.exceptions.FacadeUnavailableException
   -java.rmi.RemoteException
 
  -Rule Violations
@@ -343,17 +350,11 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 	-The method [lib.util.IteratorDsk.close()] is signaling the exception [lib.exceptions.CommunicationException]
 	-The method [lib.util.IteratorDsk.hasNext()] is signaling the exception [lib.exceptions.CommunicationException]
 	-The method [lib.util.IteratorDsk.remove()] is signaling the exception [lib.exceptions.CommunicationException]
-	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createClientFacade()] is signaling the exception [lib.exceptions.CommunicationException]
-	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createServerFacade()] is signaling the exception [lib.exceptions.CommunicationException]
-	-The method [healthwatcher.business.factories.RMIFacadeFactory.createClientFacade()] is signaling the exception [lib.exceptions.CommunicationException]
-	-The method [healthwatcher.business.factories.RMIFacadeFactory.createServerFacade()] is signaling the exception [lib.exceptions.CommunicationException]
-	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createClientFacade()] is signaling the exception [lib.exceptions.CommunicationException]
-	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createServerFacade()] is signaling the exception [lib.exceptions.CommunicationException]
 	-The method [lib.patterns.observer.Observer.notify(lib.patterns.observer.Subject)] is signaling the exception [java.rmi.RemoteException]
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(X) R6: (DiL) must handle (BuLEx) 0 ms
+(X) R6: (DiL) must handle (BuLEx) 1 ms
 
  -DiL module implementation classes:
   -healthwatcher.business.HWServer
@@ -361,9 +362,12 @@ Label: (V) = Rule Pass | (X) = Rule Fail
   -healthwatcher.business.IFacadeRMITargetAdapter
   -lib.distribution.rmi.IteratorRMISourceAdapter
   -lib.distribution.rmi.IIteratorRMITargetAdapter
+  -healthwatcher.business.factories.FacadeFactory
+  -healthwatcher.business.factories.RMIFacadeFactory
   -healthwatcher.business.HealthWatcherFacade
   -lib.distribution.rmi.IteratorRMITargetAdapter
   -healthwatcher.business.RMIFacadeAdapter
+  -healthwatcher.business.factories.AbstractFacadeFactory
   -healthwatcher.view.RMIServletAdapter
 
  -BuLEx exception implementation classes:
@@ -430,6 +434,12 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 	-The method [healthwatcher.business.IFacadeRMITargetAdapter.searchSpecialitiesByCode(int)] is not handling at least one exception in [BuLEx]
 	-The method [lib.distribution.rmi.IIteratorRMITargetAdapter.getNext()] is not handling at least one exception in [BuLEx]
 	-The method [lib.distribution.rmi.IIteratorRMITargetAdapter.close()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.factories.RMIFacadeFactory.createClientFacade()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.factories.RMIFacadeFactory.createServerFacade()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createClientFacade()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createServerFacade()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.factories.FacadeFactory.<clinit>()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.factories.FacadeFactory.getRepositoryFactory()] is not handling at least one exception in [BuLEx]
 	-The method [healthwatcher.business.HealthWatcherFacade.searchHealthUnitsBySpeciality(int)] is not handling at least one exception in [BuLEx]
 	-The method [healthwatcher.business.HealthWatcherFacade.searchDiseaseType(int)] is not handling at least one exception in [BuLEx]
 	-The method [healthwatcher.business.HealthWatcherFacade.notify(lib.patterns.observer.Subject)] is not handling at least one exception in [BuLEx]
@@ -511,10 +521,12 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 	-The method [healthwatcher.view.RMIServletAdapter.getComplaintList()] is not handling at least one exception in [BuLEx]
 	-The method [healthwatcher.view.RMIServletAdapter.searchComplaint(int)] is not handling at least one exception in [BuLEx]
 	-The method [healthwatcher.view.RMIServletAdapter.getDiseaseTypeList()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createClientFacade()] is not handling at least one exception in [BuLEx]
+	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createServerFacade()] is not handling at least one exception in [BuLEx]
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(V) R7: only (DiL) can remap (BuLEx) to (DiLEx) 4071 ms
+(V) R7: only (DiL) can remap (BuLEx) to (DiLEx) 5251 ms
 
  -DiL module implementation classes:
   -healthwatcher.business.HWServer
@@ -522,9 +534,12 @@ Label: (V) = Rule Pass | (X) = Rule Fail
   -healthwatcher.business.IFacadeRMITargetAdapter
   -lib.distribution.rmi.IteratorRMISourceAdapter
   -lib.distribution.rmi.IIteratorRMITargetAdapter
+  -healthwatcher.business.factories.FacadeFactory
+  -healthwatcher.business.factories.RMIFacadeFactory
   -healthwatcher.business.HealthWatcherFacade
   -lib.distribution.rmi.IteratorRMITargetAdapter
   -healthwatcher.business.RMIFacadeAdapter
+  -healthwatcher.business.factories.AbstractFacadeFactory
   -healthwatcher.view.RMIServletAdapter
 
  -BuLEx exception implementation classes:
@@ -532,12 +547,13 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 
  -DiLEx exception implementation classes:
   -lib.exceptions.CommunicationException
+  -lib.exceptions.FacadeUnavailableException
   -java.rmi.RemoteException
 
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(X) R8: only (BuL) can raise (BuLEx) 8 ms
+(X) R8: only (BuL) can raise (BuLEx) 7 ms
 
  -BuL module implementation classes:
   -healthwatcher.business.complaint.ComplaintRecord
@@ -600,7 +616,7 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(X) R10: (BuL) must handle (DaLEx) 0 ms
+(X) R10: (BuL) must handle (DaLEx) 1 ms
 
  -BuL module implementation classes:
   -healthwatcher.business.complaint.ComplaintRecord
@@ -618,6 +634,8 @@ Label: (V) = Rule Pass | (X) = Rule Fail
   -lib.exceptions.RepositoryException
   -lib.exceptions.PersistenceMechanismException
   -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.ConnectionPersistenceMechanismException
+  -lib.exceptions.SQLPersistenceMechanismException
   -lib.exceptions.TransactionException
 
  -Rule Violations
@@ -626,10 +644,6 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 	-The method [healthwatcher.business.complaint.ComplaintRecord.search(int)] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.complaint.ComplaintRecord.getComplaintList()] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.complaint.ComplaintRecord.validate(healthwatcher.model.complaint.Complaint)] is not handling at least one exception in [DaLEx]
-	-The method [healthwatcher.business.healthguide.MedicalSpecialityRecord.search(int)] is not handling at least one exception in [DaLEx]
-	-The method [healthwatcher.business.healthguide.MedicalSpecialityRecord.update(healthwatcher.model.healthguide.MedicalSpeciality)] is not handling at least one exception in [DaLEx]
-	-The method [healthwatcher.business.healthguide.MedicalSpecialityRecord.insert(healthwatcher.model.healthguide.MedicalSpeciality)] is not handling at least one exception in [DaLEx]
-	-The method [healthwatcher.business.healthguide.MedicalSpecialityRecord.getListaEspecialidade()] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.healthguide.HealthUnitRecord.search(int)] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.healthguide.HealthUnitRecord.insert(healthwatcher.model.healthguide.HealthUnit)] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.healthguide.HealthUnitRecord.searchSpecialityByHealthUnit(int)] is not handling at least one exception in [DaLEx]
@@ -637,6 +651,10 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 	-The method [healthwatcher.business.healthguide.HealthUnitRecord.getPartialHealthUnitList()] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.healthguide.HealthUnitRecord.update(healthwatcher.model.healthguide.HealthUnit)] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.healthguide.HealthUnitRecord.searchHealthUnitsBySpeciality(int)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.MedicalSpecialityRecord.search(int)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.MedicalSpecialityRecord.update(healthwatcher.model.healthguide.MedicalSpeciality)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.MedicalSpecialityRecord.insert(healthwatcher.model.healthguide.MedicalSpeciality)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.healthguide.MedicalSpecialityRecord.getListaEspecialidade()] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.factories.RMIFacadeFactory.createClientFacade()] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.factories.RMIFacadeFactory.createServerFacade()] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createClientFacade()] is not handling at least one exception in [DaLEx]
@@ -650,15 +668,15 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 	-The method [healthwatcher.business.complaint.DiseaseRecord.search(int)] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.complaint.DiseaseRecord.getDiseaseTypeList()] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.complaint.DiseaseRecord.insert(healthwatcher.model.complaint.DiseaseType)] is not handling at least one exception in [DaLEx]
-	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createClientFacade()] is not handling at least one exception in [DaLEx]
-	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createServerFacade()] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.employee.EmployeeRecord.update(healthwatcher.model.employee.Employee)] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.employee.EmployeeRecord.search(java.lang.String)] is not handling at least one exception in [DaLEx]
 	-The method [healthwatcher.business.employee.EmployeeRecord.insert(healthwatcher.model.employee.Employee)] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createClientFacade()] is not handling at least one exception in [DaLEx]
+	-The method [healthwatcher.business.factories.AbstractFacadeFactory.createServerFacade()] is not handling at least one exception in [DaLEx]
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(V) R11: only (BuL) can remap (DaLEx) to (BuLEx) 8977 ms
+(V) R11: only (BuL) can remap (DaLEx) to (BuLEx) 34457 ms
 
  -BuL module implementation classes:
   -healthwatcher.business.complaint.ComplaintRecord
@@ -676,6 +694,8 @@ Label: (V) = Rule Pass | (X) = Rule Fail
   -lib.exceptions.RepositoryException
   -lib.exceptions.PersistenceMechanismException
   -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.ConnectionPersistenceMechanismException
+  -lib.exceptions.SQLPersistenceMechanismException
   -lib.exceptions.TransactionException
 
  -BuLEx exception implementation classes:
@@ -684,7 +704,7 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(V) R12: only (DaL) can raise (DaLEx) 18 ms
+(V) R12: only (DaL) can raise (DaLEx) 83 ms
 
  -DaL module implementation classes:
   -healthwatcher.data.mem.SpecialityRepositoryArray
@@ -719,6 +739,8 @@ Label: (V) = Rule Pass | (X) = Rule Fail
   -lib.exceptions.RepositoryException
   -lib.exceptions.PersistenceMechanismException
   -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.ConnectionPersistenceMechanismException
+  -lib.exceptions.SQLPersistenceMechanismException
   -lib.exceptions.TransactionException
 
 --------------------------------------------------------------------------------------------------------
@@ -759,6 +781,8 @@ Label: (V) = Rule Pass | (X) = Rule Fail
   -lib.exceptions.RepositoryException
   -lib.exceptions.PersistenceMechanismException
   -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.ConnectionPersistenceMechanismException
+  -lib.exceptions.SQLPersistenceMechanismException
   -lib.exceptions.TransactionException
 
  -Rule Violations
@@ -805,7 +829,7 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(V) R15: (DaL) cannot signal (SQLEx) 1 ms
+(V) R15: (DaL) cannot signal (SQLEx) 0 ms
 
  -DaL module implementation classes:
   -healthwatcher.data.mem.SpecialityRepositoryArray
@@ -841,13 +865,15 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 --------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------
-(X) R16: (DaLEx) cannot flow (DaL, BuL, DiL) 1664 ms
+(X) R16: (DaLEx) cannot flow (DaL, BuL, DiL) 42 ms
 
  -DaLEx exception implementation classes:
   -lib.exceptions.ObjectNotFoundException
   -lib.exceptions.RepositoryException
   -lib.exceptions.PersistenceMechanismException
   -lib.exceptions.ObjectNotValidException
+  -lib.exceptions.ConnectionPersistenceMechanismException
+  -lib.exceptions.SQLPersistenceMechanismException
   -lib.exceptions.TransactionException
 
  -DaL module implementation classes:
@@ -895,9 +921,12 @@ Label: (V) = Rule Pass | (X) = Rule Fail
   -healthwatcher.business.IFacadeRMITargetAdapter
   -lib.distribution.rmi.IteratorRMISourceAdapter
   -lib.distribution.rmi.IIteratorRMITargetAdapter
+  -healthwatcher.business.factories.FacadeFactory
+  -healthwatcher.business.factories.RMIFacadeFactory
   -healthwatcher.business.HealthWatcherFacade
   -lib.distribution.rmi.IteratorRMITargetAdapter
   -healthwatcher.business.RMIFacadeAdapter
+  -healthwatcher.business.factories.AbstractFacadeFactory
   -healthwatcher.view.RMIServletAdapter
 
  -Rule Violations
@@ -905,4 +934,3 @@ Label: (V) = Rule Pass | (X) = Rule Fail
 	-The exception [lib.exceptions.RepositoryException] is flowing through [DaL, BuL, DiL]
 	-The exception [lib.exceptions.ObjectNotValidException] is flowing through [DaL, BuL, DiL]
 --------------------------------------------------------------------------------------------------------
-
