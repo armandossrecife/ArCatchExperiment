@@ -28,33 +28,43 @@ public class HealthWatcherTest {
 		int version = 10;
 		switch (version) {
 		case 1:
+			System.out.println("checkHealthWatcher01");
 			checkHealthWatcher01("./hwsrc/HealthWatcherOO_01/src", "./hwbin/HealthWatcher01.jar");
 			break;
 		case 2:
+			System.out.println("checkHealthWatcher02");
 			checkHealthWatcher02("./hwsrc/HealthWatcherOO_02/src", "./hwbin/HealthWatcher02.jar");
 			break;
 		case 3:
+			System.out.println("checkHealthWatcher03");
 			checkHealthWatcher03("./hwsrc/HealthWatcherOO_03/src", "./hwbin/HealthWatcher03.jar");
 			break;
 		case 4:
+			System.out.println("checkHealthWatcher04");
 			checkHealthWatcher04("./hwsrc/HealthWatcherOO_04/src", "./hwbin/HealthWatcher04.jar");
 			break;
 		case 5:
+			System.out.println("checkHealthWatcher05");
 			checkHealthWatcher05("./hwsrc/HealthWatcherOO_05/src", "./hwbin/HealthWatcher05.jar");
 			break;
 		case 6:
+			System.out.println("checkHealthWatcher06");
 			checkHealthWatcher06("./hwsrc/HealthWatcherOO_06/src", "./hwbin/HealthWatcher06.jar");
 			break;
 		case 7:
+			System.out.println("checkHealthWatcher07");
 			checkHealthWatcher07("./hwsrc/HealthWatcherOO_07/src", "./hwbin/HealthWatcher07.jar");
 			break;
 		case 8:
+			System.out.println("checkHealthWatcher08");
 			checkHealthWatcher08("./hwsrc/HealthWatcherOO_08/src", "./hwbin/HealthWatcher08.jar");
 			break;
 		case 9:
+			System.out.println("checkHealthWatcher09");
 			checkHealthWatcher09("./hwsrc/HealthWatcherOO_09/src", "./hwbin/HealthWatcher09.jar");
 			break;
 		case 10:
+			System.out.println("checkHealthWatcher10");
 			checkHealthWatcher10("./hwsrc/HealthWatcherOO_10/src", "./hwbin/HealthWatcher10.jar");
 			break;
 		default:
@@ -62,6 +72,11 @@ public class HealthWatcherTest {
 		}
 	}
 
+	/**
+	 * Check the version 01 
+	 * @param srcPath
+	 * @param binPath
+	 */
 	private static void checkHealthWatcher01(String srcPath, String binPath) {
 		ArCatch.config(srcPath, binPath);
 
@@ -89,6 +104,11 @@ public class HealthWatcherTest {
 
 	}
 
+	/**
+	 * Check the verion 02
+	 * @param srcPath
+	 * @param binPath
+	 */
 	private static void checkHealthWatcher02(String srcPath, String binPath) {
 		ArCatch.config(srcPath, binPath);
 
@@ -116,6 +136,11 @@ public class HealthWatcherTest {
 		check();
 	}
 
+	/**
+	 * Check the version 03
+	 * @param srcPath
+	 * @param binPath
+	 */
 	private static void checkHealthWatcher03(String srcPath, String binPath) {
 		ArCatch.config(srcPath, binPath);
 
@@ -143,6 +168,11 @@ public class HealthWatcherTest {
 		check();
 	}
 
+	/**
+	 * Check the version 04
+	 * @param srcPath
+	 * @param binPath
+	 */
 	private static void checkHealthWatcher04(String srcPath, String binPath) {
 		ArCatch.config(srcPath, binPath);
 
@@ -170,6 +200,11 @@ public class HealthWatcherTest {
 		check();
 	}
 
+	/**
+	 * Check the verion 05
+	 * @param srcPath
+	 * @param binPath
+	 */
 	private static void checkHealthWatcher05(String srcPath, String binPath) {
 		ArCatch.config(srcPath, binPath);
 
@@ -201,6 +236,11 @@ public class HealthWatcherTest {
 		check();
 	}
 
+	/**
+	 * Check the version 06
+	 * @param srcPath
+	 * @param binPath
+	 */
 	private static void checkHealthWatcher06(String srcPath, String binPath) {
 		ArCatch.config(srcPath, binPath);
 
@@ -232,6 +272,11 @@ public class HealthWatcherTest {
 		check();
 	}
 
+	/**
+	 * Check the version 07
+	 * @param srcPath
+	 * @param binPath
+	 */
 	private static void checkHealthWatcher07(String srcPath, String binPath) {
 		ArCatch.config(srcPath, binPath);
 
@@ -263,6 +308,11 @@ public class HealthWatcherTest {
 		check();
 	}
 
+	/**
+	 * Check the version 08
+	 * @param srcPath
+	 * @param binPath
+	 */
 	private static void checkHealthWatcher08(String srcPath, String binPath) {
 		ArCatch.config(srcPath, binPath);
 
@@ -294,6 +344,11 @@ public class HealthWatcherTest {
 		check();
 	}
 
+	/**
+	 * Check the version 09
+	 * @param srcPath
+	 * @param binPath
+	 */
 	private static void checkHealthWatcher09(String srcPath, String binPath) {
 		ArCatch.config(srcPath, binPath);
 
@@ -325,6 +380,11 @@ public class HealthWatcherTest {
 		check();
 	}
 
+	/**
+	 * Check the version 10 
+	 * @param srcPath
+	 * @param binPath
+	 */
 	private static void checkHealthWatcher10(String srcPath, String binPath) {
 		ArCatch.config(srcPath, binPath);
 
